@@ -5,6 +5,7 @@ version: '3.8'
 volumes:
   postgres_data:
   static_volume:
+  media_volume:
 
 # имена и описания контейнеров, которые должны быть развёрнуты
 services:
