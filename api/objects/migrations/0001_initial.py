@@ -25,11 +25,13 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "name",
-                    models.CharField(max_length=200, verbose_name="Название категории"),
+                    models.CharField(max_length=200,
+                                     verbose_name="Название категории"),
                 ),
                 ("slug", models.SlugField(max_length=200, unique=True)),
             ],
-            options={"verbose_name": "Категория", "verbose_name_plural": "Категории",},
+            options={"verbose_name": "Категория",
+                     "verbose_name_plural": "Категории", },
         ),
         migrations.CreateModel(
             name="Genre",
@@ -45,11 +47,12 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "name",
-                    models.CharField(max_length=200, verbose_name="Название жанра"),
+                    models.CharField(max_length=200,
+                                     verbose_name="Название жанра"),
                 ),
                 ("slug", models.SlugField(max_length=200, unique=True)),
             ],
-            options={"verbose_name": "Жанр", "verbose_name_plural": "Жанры",},
+            options={"verbose_name": "Жанр", "verbose_name_plural": "Жанры", },
         ),
         migrations.CreateModel(
             name="Title",

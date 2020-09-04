@@ -16,7 +16,9 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='comment',
-            options={'verbose_name': 'Комментарий', 'verbose_name_plural': 'Комментарии'},
+            options={'verbose_name': 'Комментарий',
+                     'verbose_name_plural':
+                         'Комментарии'},
         ),
         migrations.AlterModelOptions(
             name='review',
@@ -25,12 +27,16 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='comment',
             name='author',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to=settings.AUTH_USER_MODEL, verbose_name='Автор комментария'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='comments', to=settings.AUTH_USER_MODEL,
+                                    verbose_name='Автор комментария'),
         ),
         migrations.AlterField(
             model_name='comment',
             name='review',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='activity.Review', verbose_name='Отзыв'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='comments', to='activity.Review',
+                                    verbose_name='Отзыв'),
         ),
         migrations.AlterField(
             model_name='review',

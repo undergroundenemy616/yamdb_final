@@ -33,7 +33,8 @@ class Review(models.Model):
         verbose_name="оценка произведения", choices=SCORE_CHOICES
     )
 
-    pub_date = models.DateTimeField(verbose_name="Дата публикации", auto_now_add=True)
+    pub_date = models.DateTimeField(verbose_name="Дата публикации",
+                                    auto_now_add=True)
 
     class Meta:
         verbose_name = "Отзыв"
@@ -54,7 +55,8 @@ class Comment(models.Model):
         verbose_name="Автор комментария",
     )
     text = models.TextField(verbose_name="текст комментария")
-    pub_date = models.DateTimeField(verbose_name="Дата публикации", auto_now_add=True)
+    pub_date = models.DateTimeField(verbose_name="Дата публикации",
+                                    auto_now_add=True)
 
     class Meta:
         verbose_name = "Комментарий"

@@ -19,7 +19,8 @@ class ReviewViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         title_id = self.kwargs.get("title_id")
-        if Review.objects.filter(author=self.request.user, title_id=title_id).exists():
+        if Review.objects.filter(author=self.request.user,
+                                 title_id=title_id).exists():
             raise ValidationError("Review already exists")
         title = get_object_or_404(Title, pk=title_id)
         serializer.save(author=self.request.user, title=title)
