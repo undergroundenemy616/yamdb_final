@@ -1,10 +1,5 @@
-### Yambd - api для сайта с отзывами для фильмов.
-### Для запуска проекта:
-* docker-compose up --build - пересобратать образ и запустить контейнер
-* docker-compose up - запустить контейнер
-### Создание суперпользоветяля:
-* При запушенном контейнере - docker exec -it <ID контейнера> bash. Вход в терминал в самом контейнере.
-* sudo python manage.py createsuperuser - создание суперпользователя
-### Заполнение базы начальными данными:
-* При запушенном контейнере - docker exec -it <ID контейнера> bash. Вход в терминал в самом контейнере.
-* sudo python manage.py loaddata fixtures.json - заполнение базы начальными данными.
+# api_yamdb
+
+![yamdb workflow](https://github.com/undergroundenemy616/yamdb_final/workflows/yamdb%20workflow/badge.svg)
+
+<!-- https://github.com/undergroundenemy616/yamdb_final/workflows/yamdb-workflow/badge.svg -->
