@@ -52,7 +52,8 @@ class Title(models.Model):
 
     @property
     def rating(self):
-        all_scores = Review.objects.filter(title=self).values_list("score", flat=True)
+        all_scores = Review.objects.filter(title=self).values_list("score",
+                                                                   flat=True)
         return (
             round(sum(all_scores) / len(all_scores), 1)
             if len(all_scores) != 0
