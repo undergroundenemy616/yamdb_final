@@ -1,5 +1,5 @@
 # api_yamdb
 
-![yamdb workflow](https://github.com/undergroundenemy616/yamdb_final/workflows/yamdb%20workflow/badge.svg)
+Стек: python3.+, Django 2.+, PostgreSQL, DRF, Simple JWT, Docker, Gunicorn, Nginx, GitHub Actions.
 
-<!-- https://github.com/undergroundenemy616/yamdb_final/workflows/yamdb-workflow/badge.svg -->
+Проект Yamdb собирает отзывы пользователей на произведения. Произведения делятся на категории: "Книги", "Фильмы", "Музыка". Список категорий может быть расширен. Регистрация реализована следующим образом: POST запрос на email, сервис отправляет код подтверждения на email, пользователь регистрируется с этим кодом на платформе. Реализовано аутентификация по JWT, получение данных через Viewsets. Ограничения доступа организованы через permissions, так же используется фильтрация данных через DjangoFilterBackend. Развертывание происходит через docker-compose, состоящий из трех контейнеров: Web - запуск WSGI сервера Gunicorn, DB - подключение к базе данных PostgreSQL и Nginx - запуск обратного прокси-сервера Nginx. При pull request'е происходит автоматическое тестирование на качество кода, реализованное через GitHub Actions. При успешном тестировании изменения автоматически загружаются на сервер.
